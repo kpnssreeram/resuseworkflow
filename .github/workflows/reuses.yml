@@ -16,6 +16,6 @@ jobs:
         run: echo Hello, world main repo!
 
   data_storage:
-    uses: kpnssreeram/workflowtest/.github/workflows/A.yml@dev
+    uses: kpnssreeram/resuseworkflow/.github/workflows/h1.yml@reuse1
     with:
-      image_name: my-awesome-app
+      image_name: my-awesome-app reuse main input
