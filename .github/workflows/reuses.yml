@@ -16,6 +16,6 @@ jobs:
         run: echo Hello, world!
 
   docker:
-    uses: kpnssreeram/workflowtest/.github/workflows/A.yml@main
+    uses: kpnssreeram/workflowtest/.github/workflows/A.yml@dev
     with:
       image_name: my-awesome-app
