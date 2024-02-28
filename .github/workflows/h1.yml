@@ -1,17 +1,23 @@
-name: Reusable workflow example
+name: Invoke from other repo
 
 on:
   workflow_call:
     inputs:
-      config-path:
+      image_name:
         required: true
         type: string
-    
 
 jobs:
-  triage:
+  build:
     runs-on: ubuntu-latest
+
+    steps:      
+      - uses: actions/checkout@v2
+      - run: echo "Hello pavan its me from same repo but reuse1 branch other repo ${{inputs.image_name}}"
+     
+          
+  do-something-else:
+    runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/labeler@v4
-      with:
-        configuration-path: ${{ inputs.config-path }}
+    - run: echo "Hello"
