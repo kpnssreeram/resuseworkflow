@@ -1,18 +1,21 @@
-name: Call a reusable workflow
+# This is a basic workflow to showcase the use of Reusable Workflows
+
+name: Reusable Workflow user
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:
-  call-workflow:
-    uses: kpnssreeram/resuseworkflow/.github/workflows/reuses.yml@main
+  do-it:
+    runs-on: ubuntu-latest
 
-  call-workflow-passing-data:
-    permissions:
-      contents: read
-      pull-requests: write
-    uses: octo-org/example-repo/.github/workflows/h1.yml@resue1
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+  docker:
+    uses: kpnssreeram/workflowtest/.github/workflows/A.yml@main
     with:
-      config-path: .github/labeler.yml
+      image_name: my-awesome-app
