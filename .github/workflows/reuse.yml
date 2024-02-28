@@ -19,7 +19,7 @@ jobs:
     
     steps:
       - name: Reuse Workflow Step
-        uses: https://github.com/kpnssreeram/resuseworkflow/blob/main/.github/workflows/h1.yml@main
+        uses: kpnssreeram/resuseworkflow/.github/workflows/h1.yml@main
         with:
           name: kpnss
         secrets:
