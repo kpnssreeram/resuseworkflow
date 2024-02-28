@@ -1,0 +1,29 @@
+name: workflow_reuse
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  dosomething:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+        
+      - name: reuse1
+        run: echo "hello from reuse1"
+  
+  reuseejon:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Reuse Workflow Step
+        uses: https://github.com/kpnssreeram/resuseworkflow/blob/main/.github/workflows/h1.yml@main
+        with:
+          name: kpnss
+        secrets:
+          username: kpnssreeram
+          password: helll123
+    
+    
