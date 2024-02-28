@@ -4,11 +4,9 @@ on:
   workflow_dispatch:
 
 jobs:
-  reusejob:
-    call-workflow:
-      permissions:
-        contents: read
-        pull-requests: write
-      uses: "kpnssreeram/reuseworkflow/.github/workflows/h1.yml@main"
-      with:
-         name: hello
+  caller:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: kpnssreeram/reuseworkflow/.github/workflows/h1.yml@test1
+        with:
+          name: hello
