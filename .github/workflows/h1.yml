@@ -1,0 +1,33 @@
+name: workflow main
+
+on: 
+  workflow_call:
+    inputs:
+      name:
+        required: true
+        type: string
+    secrets:
+      username:
+        required: true
+        type: string
+      password:
+        required: true
+        type: string
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+  
+    steps:
+        - name: Checkout
+          uses: actions/checkout@v2
+        
+        - name: Printing
+          run: |
+            echo ${{inputs.name}}
+
+  dosomething:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo "hello"
