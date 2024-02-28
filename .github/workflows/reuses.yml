@@ -1,11 +1,18 @@
-name: workflow_reuse
+name: Call a reusable workflow
 
 on:
-  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  caller:
-    runs-on: ubuntu-latest
-    uses: kpnssreeram/reuseworkflow/.github/workflows/h1.yml@test1
+  call-workflow:
+    uses: kpnssreeram/resuseworkflow/.github/workflows/reuses.yml@main
+
+  call-workflow-passing-data:
+    permissions:
+      contents: read
+      pull-requests: write
+    uses: octo-org/example-repo/.github/workflows/h1.yml@resue1
     with:
-      name: hello
+      config-path: .github/labeler.yml
