@@ -2,8 +2,7 @@
 
 name: Reusable Workflow user
 
-on: 
-  workflow_dispatch:
+on: [push]
 
 jobs:
   do-it:
