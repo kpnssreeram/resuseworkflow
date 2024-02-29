@@ -22,6 +22,6 @@ jobs:
           
   do-something-else:
     runs-on: ubuntu-latest
-
+    if: ${{ inputs.tag=='runelse' }}
     steps:
     - run: echo "Hello"
