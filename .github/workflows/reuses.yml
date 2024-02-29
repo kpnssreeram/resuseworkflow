@@ -2,8 +2,7 @@
 
 name: Reusable Workflow user
 
-on:
-  push:
+on: push
 
 jobs:
   do-it:
