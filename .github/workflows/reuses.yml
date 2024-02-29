@@ -18,3 +18,4 @@ jobs:
     uses: kpnssreeram/resuseworkflow/.github/workflows/h1.yml@reuse1
     with:
       image_name: my-awesome-app reuse main input
+      tag: runbuild
