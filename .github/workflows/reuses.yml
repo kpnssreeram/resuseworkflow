@@ -2,8 +2,8 @@
 
 name: Reusable Workflow user
 
-on: [push]
-
+on: 
+  workflow_dispatch: 
 jobs:
   do-it:
     runs-on: ubuntu-latest
