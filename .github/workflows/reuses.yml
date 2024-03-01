@@ -15,7 +15,7 @@ jobs:
         run: echo Hello, world main repo!
 
   data_storage:
-    uses: kpnssreeram/resuseworkflow/.github/workflows/h1.yml@reuse1
+    uses: kpnssreeram/resuseworkflow-composite/.github/workflows/h1.yml@reuse1
     with:
       image_name: my-awesome-app reuse main input
       tag: runbuild
